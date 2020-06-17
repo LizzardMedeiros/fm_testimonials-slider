@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/style.css">
+
+  <link rel="stylesheet" href="./css/m_style.css" media="screen and (max-width:1100px)">
+  <link rel="stylesheet" href="./css/style.css" media="screen and (min-width:1100px)">
   
   <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
 
@@ -28,7 +30,7 @@
       </div>
 
       <div class="content-image">
-        <img src="./images/image-tanya.jpg" alt="profile-pic"/>
+        <img src="./images/image-tanya.jpg" class="profile-pic" alt="profile-pic"/>
         <div class="navigation">
           <a href="#" class="btn-prev" rel="noopener noreferrer">
             <img src="./images/icon-prev.svg" alt="">
@@ -54,7 +56,7 @@
       </div>
 
       <div class="content-image">
-        <img src="./images/image-john.jpg" alt="profile-pic"/>
+        <img src="./images/image-john.jpg" class="profile-pic" alt="profile-pic"/>
         <div class="navigation">
           <a href="#" class="btn-prev" rel="noopener noreferrer">
             <img src="./images/icon-prev.svg" alt="">
@@ -72,32 +74,31 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/LizzardMedeiros" target="_blank">LizzardMedeiros</a>.
   </div>
-
-  <script>
-    const btnPrev = document.querySelectorAll('.btn-prev');
-    const btnNext = document.querySelectorAll('.btn-next');
-    const itemArray = document.querySelectorAll('.item');
-    let sel = 0;
-
-    btnPrev.forEach(btn => {
-      btn.addEventListener('click', function() {
-        if(sel === 0) return;
-        itemArray[sel].classList.remove('selected');
-        itemArray[sel].previousElementSibling.classList.add('selected');
-        sel--;
-      });
-    })
-
-    btnNext.forEach(btn => {
-      btn.addEventListener('click', function() {
-        if(sel === itemArray.length - 1) return;
-        itemArray[sel].classList.remove('selected');
-        itemArray[sel].nextElementSibling.classList.add('selected');
-        sel++;
-      });
-    });
-
-
-  </script>
 </body>
+<script>
+  const btnPrev = document.querySelectorAll('.btn-prev');
+  const btnNext = document.querySelectorAll('.btn-next');
+  const itemArray = document.querySelectorAll('.item');
+  let sel = 0;
+
+  btnPrev.forEach(btn => {
+    btn.addEventListener('click', function() {
+      if(sel === 0) return;
+      itemArray[sel].classList.remove('selected');
+      itemArray[sel].previousElementSibling.classList.add('selected');
+      sel--;
+    });
+  })
+
+  btnNext.forEach(btn => {
+    btn.addEventListener('click', function() {
+      if(sel === itemArray.length - 1) return;
+      itemArray[sel].classList.remove('selected');
+      itemArray[sel].nextElementSibling.classList.add('selected');
+      sel++;
+    });
+  });
+
+
+</script>
 </html>
