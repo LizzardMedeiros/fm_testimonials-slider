@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  padding: 0;
+  font-size: 1.97rem;
+  font-weight: 300;
+  line-height: 46px;
+  /* border: 1px solid green; */
+}
+
+.profile {
+  font-size: 1.35em;
+  margin: 0;
+}
+
+.profile strong {
+  font-weight: 500;
+  color: hsl(240, 38%, 20%);
+}
+
+.profile small {
+  color: hsl(240, 18%, 77%);
+}
+
+article {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 800px;
+  padding: 0 168px;
+}
+
+.selected {
+  display: flex;
+  align-items: center;
+}
+
+section {
+  display: none;
+  
+}
+
+section .content-text {
+  /* border: 1px solid red; */
+  background-image: url(../images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-position-x: 90px;
+  padding-top: 38px;
+  width: 43%;
+  z-index: 5;
+}
+
+section .content-image {
+  background-image: url(../images/pattern-bg.svg);
+  margin-left: -130px;
+  padding: 64px 80px;
+  z-index: 0;
+}
