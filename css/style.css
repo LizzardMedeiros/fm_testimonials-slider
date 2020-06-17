@@ -61,12 +61,33 @@ section .content-text {
 section .content-image {
   background-image: url(../images/pattern-bg.svg);
   margin-left: -150px;
-  padding: 64px 90px;
+  padding: 60px 90px;
   z-index: 0;
 }
 
 section .content-image img {
   border-radius: 5px;
+}
+
+.content-image .navigation {
+  margin-top: -12px;
+  margin-left: 75px;
+}
+
+.content-image .navigation a {
+  text-decoration: none;
+  background-color: white;
+  padding: 16px;
+}
+
+.content-image .navigation .btn-prev {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.content-image .navigation .btn-next {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
 }
 
 .attribution {
